@@ -1,0 +1,1020 @@
+{
+  "graphs": [
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.hash_index_cells_used{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.hash_index_cells_total{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Adaptive Hash Index"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.buffer_pool_pages_total{$db}",
+            "style": {
+              "palette": "purple"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.buffer_pool_pages_data{$db}, mysql.innodb.buffer_pool_pages_dirty{$db}, mysql.innodb.buffer_pool_pages_free{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Buffer Pool"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.pages_written{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          },
+          {
+            "q": "mysql.innodb.pages_read{$db}",
+            "type": "line"
+          },
+          {
+            "q": "mysql.innodb.pages_created{$db}",
+            "type": "line"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Buffer Pool Activity"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.buffer_pool_read_requests{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.innodb.buffer_pool_reads{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Buffer Pool Efficiency"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.checkpoint_age{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Checkpoint Age"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.row_lock_time{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Current Lock Waits"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.ibuf_merges{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.innodb.ibuf_merged{$db}"
+          },
+          {
+            "q": "mysql.innodb.ibuf_merged_inserts{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Insert Buffer"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "mysql.innodb.ibuf_segment_size{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.ibuf_free_list{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.ibuf_size{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Insert Buffer Usage"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "mysql.innodb.mem_adaptive_hash{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.mem_page_hash{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.mem_dictionary{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.mem_file_system{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.mem_lock_system{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Internal Hash Memory Usage"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.os_file_fsyncs{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.innodb.os_log_fsyncs{$db}"
+          },
+          {
+            "q": "mysql.innodb.log_writes{$db}"
+          },
+          {
+            "q": "mysql.innodb.os_file_writes{$db}"
+          },
+          {
+            "q": "mysql.innodb.os_file_reads{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB I/O"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.pending_log_writes{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.innodb.pending_normal_aio_reads{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_normal_aio_writes{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_log_flushes{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_ibuf_aio_reads{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_aio_sync_ios{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_buffer_pool_flushes{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_checkpoint_writes{$db}"
+          },
+          {
+            "q": "mysql.innodb.pending_aio_log_ios{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB I/O Pending"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.lock_structs{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB lock Structures"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "mysql.innodb.lsn_current{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.lsn_flushed{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.lsn_current{$db} - mysql.innodb.lsn_flushed{$db}",
+            "todo": "lsn_current is calculated improperly. See: https://github.com/DataDog/dd-agent/pull/1269/files#diff-2abbe91e34f40698b7344edb96e34afcR797 vs http://bazaar.launchpad.net/~percona-toolkit-dev/percona-monitoring-plugins/1.1/view/head:/cacti/scripts/ss_get_mysql_stats.php#L1071",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Log"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.mem_total{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.mem_additional_pool{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Memory Allocation"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.row_lock_time{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Row Lock Time"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.row_lock_waits{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Row Lock Waits"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.rows_read{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.rows_deleted{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.rows_updated{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.rows_inserted{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Row Operations"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.mutex_spin_waits{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          },
+          {
+            "q": "mysql.innodb.mutex_spin_rounds{$db}",
+            "type": "line"
+          },
+          {
+            "q": "mysql.innodb.mutex_os_waits{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Semaphores"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.semaphore_wait_time{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Semaphore Wait Time"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.semaphore_waits{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Semaphore Waits"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.tables_in_use{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.locked_tables{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Tables In Use"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.history_list_length{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "todo": "innodb_transactions is not implemented in https://github.com/DataDog/dd-agent/pull/1269/files#diff-2abbe91e34f40698b7344edb96e34afcR694"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Transactions"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.innodb.active_transactions{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.locked_transactions{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.innodb.read_views{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.innodb.current_transactions{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "InnoDB Transactions Active/Locked"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.myisam.key_read_requests{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.myisam.key_reads{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.myisam.key_write_requests{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.myisam.key_writes{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MyISAM Indexes"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.myisam.key_buffer_size{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.myisam.key_buffer_bytes_used{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.myisam.key_buffer_bytes_unflushed{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MyISAM Key Cache"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.binlog.cache_use{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "line"
+          },
+          {
+            "q": "mysql.binlog.cache_disk_use{$db}"
+          },
+          {
+            "q": "mysql.binlog.disk_use{$db}"
+          },
+          {
+            "q": "mysql.replication.relay_log_disk_use{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Binary/Relay Logs"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.questions{$db}",
+            "style": {
+              "palette": "purple"
+            },
+            "type": "area"
+          },
+          {
+            "q": "avg:mysql.performance.com_select{$db}, mysql.performance.com_delete{$db}, mysql.performance.com_insert{$db}, mysql.performance.com_update{$db}, mysql.performance.com_replace{$db}, mysql.performance.com_load{$db}, mysql.performance.com_delete_multi{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Command Counters"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.net.max_connections_available{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.net.max_connections{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.net.aborted_clients{$db}",
+            "type": "line"
+          },
+          {
+            "q": "mysql.net.aborted_connects{$db}"
+          },
+          {
+            "q": "mysql.performance.threads_connected{$db}",
+            "style": {
+              "palette": "cool"
+            }
+          },
+          {
+            "q": "mysql.net.connections{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Connections"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.table_cache_size{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.open_tables{$db}"
+          },
+          {
+            "q": "mysql.performance.open_files{$db}"
+          },
+          {
+            "q": "mysql.performance.opened_tables{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Files and Tables"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "mysql.performance.handler_write{$db}, mysql.performance.handler_update{$db}, mysql.performance.handler_delete{$db}, mysql.performance.handler_read_first{$db}, mysql.performance.handler_read_key{$db}, mysql.performance.handler_read_next{$db}, mysql.performance.handler_read_prev{$db}, mysql.performance.handler_read_rnd{$db}, mysql.performance.handler_read_rnd_next{$db}",
+            "style": {
+              "palette": "dog_classic"
+            },
+            "type": "area"
+          }
+        ]
+      },
+      "title": "MySQL Handlers"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.bytes_sent{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.bytes_received{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Network Traffic"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.qcache_queries_in_cache{$db}",
+            "style": {
+              "palette": "orange"
+            }
+          },
+          {
+            "q": "mysql.performance.qcache_hits{$db}"
+          },
+          {
+            "q": "mysql.performance.qcache_inserts{$db}",
+            "style": {
+              "palette": "dog_classic"
+            }
+          },
+          {
+            "q": "mysql.performance.qcache_not_cached{$db}"
+          },
+          {
+            "q": "mysql.performance.qcache_lowmem_prunes{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Query Cache"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.qcache_size{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.qcache_free_memory{$db}",
+            "type": "area"
+          }
+        ],
+        "todo": "Add Qcache_total_blocks and Qcache_free_blocks",
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Query Cache Memory"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.select_full_join{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.select_full_range_join{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.select_range{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.select_range_check{$db}",
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.select_scan{$db}",
+            "type": "area"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Select Types"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.sort_rows{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.sort_range{$db}",
+            "style": {
+              "palette": "cool"
+            }
+          },
+          {
+            "q": "mysql.performance.sort_merge_passes{$db}"
+          },
+          {
+            "q": "mysql.performance.sort_scan{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Sorts"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.table_locks_immediate{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.table_locks_immediate{$db}",
+            "style": {
+              "palette": "dog_classic"
+            }
+          },
+          {
+            "q": "mysql.performance.table_locks_waited{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.slow_queries{$db}",
+            "style": {
+              "palette": "dog_classic"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Table Locks"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.created_tmp_tables{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.created_tmp_tables{$db}",
+            "style": {
+              "palette": "dog_classic"
+            }
+          },
+          {
+            "q": "mysql.performance.created_tmp_disk_tables{$db}"
+          },
+          {
+            "q": "mysql.performance.created_tmp_files{$db}",
+            "style": {
+              "palette": "cool"
+            }
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Temporary Objects"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.thread_cache_size{$db}",
+            "style": {
+              "palette": "warm"
+            },
+            "type": "area"
+          },
+          {
+            "q": "mysql.performance.threads_connected{$db}",
+            "style": {
+              "palette": "dog_classic"
+            }
+          },
+          {
+            "q": "mysql.performance.threads_running{$db}"
+          },
+          {
+            "q": "diff(mysql.performance.threads_created{$db})",
+            "todo": "Fix me once this one is fixed: https://github.com/DataDog/dd-agent/pull/1269/files#diff-2abbe91e34f40698b7344edb96e34afcR91"
+          },
+          {
+            "q": "mysql.performance.threads_cached{$db}"
+          }
+        ],
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Threads"
+    },
+    {
+      "definition": {
+        "viz": "timeseries",
+        "requests": [
+          {
+            "q": "avg:mysql.performance.handler_commit{$db}",
+            "style": {
+              "palette": "warm"
+            }
+          },
+          {
+            "q": "mysql.performance.handler_rollback{$db}"
+          }
+        ],
+        "todo": "Add Handler_savepoint and Handler_savepoint_rollback",
+        "events": [
+
+        ]
+      },
+      "title": "MySQL Transaction Handler"
+    }
+  ],
+  "title": "Better MySQL Dashboard",
+  "description": "Better MySQL Dashboard",
+  "template_variables": [
+    {
+      "default": "dbinstanceidentifier:your_db.aws.rds",
+      "prefix": "dbinstanceidentifier",
+      "name": "db"
+    }
+  ]
+}
